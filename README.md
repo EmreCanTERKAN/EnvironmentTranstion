@@ -17,7 +17,7 @@ dotnet publish -c Release -o C:\Users\PC\Desktop\1 -p:EnvironmentName=Production
 ### 2. Publish için csproj dosyasındaki ayar
 
 ```bash
-  <Target Name="OverrideAppSettings" AfterTargets="Publish">
+<Target Name="OverrideAppSettings" AfterTargets="Publish">
 	<PropertyGroup>
 		<EnvironmentName Condition=" '$(EnvironmentName)' == '' ">Production</EnvironmentName>
 		<SourceAppSettings>appsettings.$(EnvironmentName).json</SourceAppSettings>
